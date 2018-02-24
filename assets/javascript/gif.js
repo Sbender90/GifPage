@@ -1,0 +1,1 @@
+//  api key  (AK5yVQ1pQxyK1dlvIofEWgF8vz6bDa0u)(https://api.giphy.com/v1/gifs/random?api_key=AK5yVQ1pQxyK1dlvIofEWgF8vz6bDa0u&tag=&rating=G)
