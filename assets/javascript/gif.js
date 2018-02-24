@@ -4,18 +4,20 @@ var examples = ["cheetah", "Bear", "Monkey", "Snake"]
 
 
 
-var queryURL = "https://api.giphy.com/v1/gifs/search?q=api_key=AK5yVQ1pQxyK1dlvIofEWgF8vz6bDa0u";
+$(".gif-button").on("click", function(event) {
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + $(this).attr('data-animal') + "&api_key=AK5yVQ1pQxyK1dlvIofEWgF8vz6bDa0u&limit=10&rating=pg&";
 
-$.ajax({
+  event.preventDefault();
+  $.ajax({
     url: queryURL,
     method: 'GET'
-  }).then(function(response) {
+  }).done(function(response) {
     console.log(response);
     var results = response.data;
-
-    for (var i = 0; i < resilts.length; i++) {
+    
+    for (var i = 0; i < results.length; i++) {
         var gifDiv = $("<div>");
-        var rating = $("<p>").text("Rating: " + resilts[i].rating);
+        var p = $("<p>").text("Rating: " + results[i].rating);
         var gifImage = $("<img>");
 
         gifImage.attr("src", results[i].images.fixed_height.url);
@@ -24,5 +26,10 @@ $.ajax({
         gifDiv.append(gifImage);
 
         $("#animals").prepend(gifDiv);
+    
     }
+
+    
   });
+
+});
