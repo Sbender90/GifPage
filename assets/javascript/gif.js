@@ -36,12 +36,17 @@ $(".gif-button").on("click", function(event) {
 // var userInput = $('#animalInput').text();
 $('#submitButton').on('click', function() {
   event.preventDefault();
-    var userInput = $('#animalInput').val();
-      console.log(userInput);
+    var userInput = $('#animalInput').val().trim();
+    var newButtons = $("<button>");  
+    newButtons.attr("userInput", newButtons);
+    $('#newButtons').text(newButtons);
+    
       $('#submitButton').attr(userInput);
+      console.log(userInput);
       console.log(submitButton);
-      document.getElementById("submitButton").value="userInput"
+      
 
+      
 
 
   
