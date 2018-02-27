@@ -33,23 +33,29 @@ $(".gif-button").on("click", function(event) {
   });
 
 });
+var newAnimal = $("#animalInput");
+$(document).ready(function(){
+  $("#submitButton").click(function() {
+  $('#gifButtons').append('<button data-role="button" data-inline="true" data-mini="true" data-theme="b">' + animalInput.val + '</button>').trigger('create');
+  }); 
+  });
 // var userInput = $('#animalInput').text();
-$('#submitButton').on('click', function() {
-  event.preventDefault();
-    var userInput = $('#animalInput').val().trim();
-    var newButtons = $("<button>");  
-    newButtons.attr("userInput", newButtons);
-    $('#newButtons').text(newButtons);
-    
-      $('#submitButton').attr(userInput);
-      console.log(userInput);
-      console.log(submitButton);
+var newButtons = $("#gifButtons");
+for(i = 0; i < newButons.length; i++) {
+
+  $("#submitButton").on("click", "#newButtons", function() {
+    console.log(this.value);
+  });
+  // $('#submitButton').on('click', function() {
+  //   event.preventDefault();
+  //     var userInput = $('#animalInput').val().trim();
+  //     var newButtons = $("<button>");  
+  //     newButtons.attr("userInput", newButtons);
+  //     $('#newButtons').text(newButtons);
       
-
-      
-
-
-  
-
-
-});
+  //       $('#submitButton').attr(userInput);
+  //       console.log(userInput);
+  //       console.log(submitButton);
+        
+  // });
+};
