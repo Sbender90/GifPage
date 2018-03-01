@@ -50,7 +50,7 @@ renderButtons();
 
 // add more values to the animalsArr
 $("#addAnimal").on("click", function(){
-  var userInput = $("#animalInput").val().trim();
+  var userInput = $("#animalInput").val().trim().toLowerCase();
 
   // on click of addAnimal 
   // get the value from animalInput
