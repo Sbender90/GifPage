@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>.gif Generator</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
     <div id="gifButtons">
-        <button data-animal="cheetah" class="gif-button">cheetah</button>
-        <button data-animal="bear" class="gif-button">bear</button>
-        <button data-animal="monkey" class="gif-button">monkey</button>
-        <button data-animal="snake" class="gif-button">snake</button>
+       
         <!-- <div id="newButtons"></div> -->
     </div>
 
     <form id="animal-form">
+        <span id="alert"></span>
+        <br>
         <label form="animal-input">Add an Animal Here!</label>
-            <input type="text" id="animalInput"><br>
+            <input type="text" id="animalInput">
+            <br>
         <div id="submitButton">
             <input id="addAnimal" type="button" value="submit">
         </div>    
